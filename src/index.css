@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "GoldmanBold";
-  src: local("GoldmanBold"),
+  font-family: "Manifesto";
+  src: local("Manifesto"),
     url("./fonts/Manifesto/MANIFESTO.ttf") format("truetype");
   font-weight: bold;
 }
