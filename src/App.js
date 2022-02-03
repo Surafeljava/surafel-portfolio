@@ -32,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
 
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
-  })
   const isDesktop = useMediaQuery({ minWidth: 768 })
   const isMobile = useMediaQuery({ maxWidth: 767 })
 
