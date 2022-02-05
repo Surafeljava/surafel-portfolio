@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
 function SlideViewPage() {
     const classes = useStyles();
     
-    const isDesktop = useMediaQuery({ minWidth: 768 });
     const isMobile = useMediaQuery({ maxWidth: 767 });
 
     let carouselWidth = isMobile ? 350 : 600;
