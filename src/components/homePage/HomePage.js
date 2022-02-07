@@ -1,7 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Grid, CssBaseline, Button, IconButton, Typography} from '@mui/material';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 import { makeStyles } from "@mui/styles";
 
