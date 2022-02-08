@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 import './index.css';
 
@@ -26,7 +27,9 @@ const theme = createTheme({
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Router>
+        <App/>
+      </Router>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
