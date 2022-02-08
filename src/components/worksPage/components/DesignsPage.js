@@ -36,13 +36,12 @@ function DesignsPage({work}) {
 
             {work.files.length !== 0 && (
                 work.files.map((file) => (
-                    <Grid item xs={3} key={file.title} marginRight={3}>
+                    <Grid item xs={3} key={file.title} marginRight={3} marginBottom={3}>
                         <DesignsCard design={file}/>
                     </Grid>
                 ))
             )}
         </Grid>
-        <br />
         <Grid container direction="row" justifyContent="flex-end">
             <Button variant='text'>
                 <Typography className={classes.seeAllText} fontFamily="Roboto" align='left'>  See all </Typography>

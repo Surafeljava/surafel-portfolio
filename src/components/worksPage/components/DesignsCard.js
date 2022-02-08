@@ -20,7 +20,15 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300
   },
   box: {
-      width: "100%"
+    width: "100%",
+    
+  },
+  dateText: {
+    visibility: 'visible',
+    color: colors.white + 'AA',
+    fontSize: "14px",
+    letterSpacing: 2,
+    fontWeight: 200
   }
 }));
 
@@ -49,6 +57,7 @@ function DesignsCard({design}) {
                 <Grid container direction="column" alignItems="flex-start" alignContent="flex-start" xs={12}>
                     <Typography className={classes.titleText} fontFamily="Roboto" align='left'>  {design.title.toUpperCase()} </Typography>
                     <Typography className={classes.description} fontFamily="Roboto" align='left'> {design.description} </Typography>
+                    
                 </Grid>
             </div>
 

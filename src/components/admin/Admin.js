@@ -60,10 +60,12 @@ function Admin() {
 
         let dataUploadRef = ref.doc(category.value).collection("files");
 
+        var myTimestamp = firebase.firestore.FieldValue.serverTimestamp();
+
         let response = await dataUploadRef.add({
             title: title,
             description: description,
-            date: Date.now().toString(),
+            date: myTimestamp,
             url: url
         });
 
