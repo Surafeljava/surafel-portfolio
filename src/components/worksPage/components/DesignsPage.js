@@ -36,7 +36,7 @@ function DesignsPage({work}) {
 
             {work.files.length !== 0 && (
                 work.files.map((file) => (
-                    <Grid item xs={3} key={file.title} marginRight={3} marginBottom={3}>
+                    <Grid item key={file.title} marginRight={3} marginBottom={3}>
                         <DesignsCard design={file}/>
                     </Grid>
                 ))

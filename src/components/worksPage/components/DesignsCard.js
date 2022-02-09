@@ -20,8 +20,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300
   },
   box: {
-    width: "100%",
-    
+    width: "300px",
+    height: "300px",
+    "&:hover": {
+      width: "320px"
+    },
+    transition: "0.5s"
   },
   dateText: {
     visibility: 'visible',
@@ -36,7 +40,7 @@ function DesignsCard({design}) {
     const classes = useStyles();
   return <Grid container direction="column">
       <Grid item>
-          <div className={classes.box} style={{ height: "400px", position: "relative", display: "flex", backgroundSize: "cover", borderRadius: "20px"}}>
+          <div className={classes.box} style={{ position: "relative", display: "flex", backgroundSize: "cover", borderRadius: "20px"}}>
             <div style={{background: `url(${design.url})`, 
             width: "100%", height:"100%", backgroundSize: "cover", position: "absolute", borderRadius: "20px"}}>
             </div>

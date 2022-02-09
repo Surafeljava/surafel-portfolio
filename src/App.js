@@ -6,6 +6,7 @@ import HomePage from './components/homePage/HomePage';
 import WorksPage from './components/worksPage/WorksPage';
 import Footer from './components/footer/Footer';
 import Admin from './components/admin/Admin';
+import AboutMePage from './components/aboutMePage/AboutMePage';
 
 import { Routes, Route} from "react-router-dom";
 
@@ -17,17 +18,16 @@ function App() {
 
       <HomePage/>
 
-      <Grid item>
+      <AboutMePage/>
+
+      <Grid item id="projects">
         <Routes>
         <Route path="/" element={<WorksPage />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
       </Grid>
 
-
-      <div id="contact">
-        <Footer/>
-      </div>
+      <Footer/>
       
     </Grid>
   );

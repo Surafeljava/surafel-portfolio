@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Grid, CircularProgress} from '@mui/material';
+import {Grid, CircularProgress, Typography} from '@mui/material';
 import firebase from '../../firebase';
 
 import TabView from './components/TabView';
@@ -7,6 +7,8 @@ import TabView from './components/TabView';
 import DesignsPage from './components/DesignsPage';
 import SoftwaresPage from './components/SoftwaresPage';
 import ResearchesPage from './components/ResearchesPage';
+
+import colors from '../../constants/colors';
 
 function WorksPage() {
     const [designWorks, setDesignWorks] = useState([]);
@@ -60,9 +62,16 @@ function WorksPage() {
 
 
   return <Grid container direction="column" paddingTop={3} paddingBottom={3} style={{ backgroundColor: "#EEEEEE" }}>
+      <Grid container direction="row" paddingTop={2} justifyContent="center">
+          <Typography style={{color: colors.primary, fontSize: "30px",letterSpacing: 5,fontWeight: 800}} 
+          fontFamily="Roboto" align='left'> {"Personal PROJECTS".toUpperCase()} </Typography>
+      </Grid>
+      <br />
       <TabView onTabClicked={onTabChange}/>
       {loading && (
-          <CircularProgress/>
+          <Grid container direction="row" justifyContent="center" paddingTop={2} paddingBottom={2}>
+              <CircularProgress/>
+          </Grid>
       )}
 
       {!loading && (

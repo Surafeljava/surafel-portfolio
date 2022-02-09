@@ -18,11 +18,11 @@ import colors from '../../constants/colors';
 
 const useStyles = makeStyles((theme) => ({
   topbutton: {
-    color: "#CCCCCC",
+    color: colors.white,
     fontWeight: 100,
     letterSpacing: 5,
     "&:hover": {
-      color: "#FFD016"
+      color: colors.secondary
     }
   },
   maintext: {
@@ -33,13 +33,18 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     fontSize: "33px", 
-    color: "#FFFFFF",
+    color: colors.white,
     "&:hover": {
       color: colors.secondary,
       fontSize: "50px",
     },
     transition: "0.3s"
-  }
+  },
+  circleIcon: {
+    fontSize: "18px", 
+    color: colors.white + "66",
+  },
+
 }));
 
 function HomePage() {
@@ -51,23 +56,33 @@ function HomePage() {
   return <Grid container direction="column" width="100%" height="100vh" 
   style={{backgroundColor: "#040710", padding: "20px", backgroundImage: `url(${portfolioBg})`, backgroundSize: "cover"}} justifyContent="center">
       <CssBaseline/>
-      <Grid container direction="row" justifyContent="center">
-        <Button style={{color:"#FFFFFF"}} variant="text" href="#myworks">
-          <Typography variant="h5" fontFamily= "Manifesto" className={classes.topbutton} fontSize={isMobile ? 18 : 22}>  MY WORKS </Typography>
+      <Grid container direction="row" justifyContent="center" alignItems="center" alignContent="center">
+        <Button variant="text" href="#myworks">
+          <Typography className={classes.topbutton} fontFamily="Roboto" fontSize={isMobile ? 14 : 18}>  {"About Me".toUpperCase()} </Typography>
         </Button>
 
 
-        <Grid item marginLeft={5} marginRight={5}>
-          <IconButton>
-            <CircleOutlinedIcon style={{fontSize: "20px", color: "#FFD016DD"}}/>
-          </IconButton>
+        <Grid item marginLeft={2} marginRight={3}>
+          <CircleOutlinedIcon className={classes.circleIcon}/>
         </Grid>
 
 
-        <Button style={{color:"#FFFFFF"}} variant="text" className="font-face-gm" href="#contact">
-          <Typography variant="h5" className={classes.topbutton} fontFamily="Manifesto" fontSize={isMobile ? 18 : 22}>  CONTACT </Typography>
+        <Button variant="text" href="#projects">
+          <Typography className={classes.topbutton} fontFamily="Roboto" fontSize={isMobile ? 14 : 18}>  {"Projects".toUpperCase()} </Typography>
+        </Button>
+
+        <Grid item marginLeft={2} marginRight={3}>
+          <CircleOutlinedIcon className={classes.circleIcon}/>
+        </Grid>
+
+
+        <Button variant="text" href="#contact">
+          <Typography className={classes.topbutton} fontFamily="Roboto" fontSize={isMobile ? 14 : 18}>  {"Contact".toUpperCase()} </Typography>
         </Button>
       </Grid>
+
+
+
       <Grid container direction="row" flexGrow={1} alignItems="center" justifyContent="space-between">
         {isDesktop && (
           <Grid item width="80px">
